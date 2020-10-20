@@ -1,3 +1,3 @@
-import { RNSelect } from "./src/Select";
+import { Select } from "./src/Select";
 
-export { RNSelect };
+export { Select };
