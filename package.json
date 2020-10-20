@@ -1,8 +1,8 @@
 {
   "name": "react-native-select-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react-native select component that provides a dropdown for use in react-native.  This component also provides a search functionality within the dropdown that allows a use to filter results.",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,9 +21,9 @@
   "author": "Michael Eakins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MichaelEakins/react-native-select/issues"
+    "url": "https://github.com/MichaelEakins/react-native-select-search/issues"
   },
-  "homepage": "https://github.com/MichaelEakins/react-native-select#readme",
+  "homepage": "https://github.com/MichaelEakins/react-native-select-search#readme",
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@react-native-community/bob": "^0.16.2",
