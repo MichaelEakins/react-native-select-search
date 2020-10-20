@@ -1,8 +1,7 @@
 {
-  "name": "react-native-select-search",
+  "name": "@types/react-native-select",
   "version": "1.0.3",
   "description": "A react-native select component that provides a dropdown for use in react-native.  This component also provides a search functionality within the dropdown that allows a use to filter results.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +17,9 @@
     "react-native-dropdown",
     "searchable-dropdown"
   ],
+  "prepublish": "tsc",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Michael Eakins",
   "license": "MIT",
   "bugs": {
@@ -45,8 +47,7 @@
   },
   "peerDependencies": {
     "react": "~16.11.0",
-    "react-dom": "~16.11.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz"
+    "react-dom": "~16.11.0"
   },
   "@react-native-community/bob": {
     "source": "src",
@@ -55,5 +56,9 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   }
 }
