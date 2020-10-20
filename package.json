@@ -1,6 +1,6 @@
 {
-  "name": "@types/react-native-select",
-  "version": "1.0.4",
+  "name": "react-native-select-search",
+  "version": "1.0.3",
   "description": "A react-native select component that provides a dropdown for use in react-native.  This component also provides a search functionality within the dropdown that allows a use to filter results.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -56,9 +56,5 @@
       "module",
       "typescript"
     ]
-  },
-  "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
   }
 }
