@@ -1,6 +1,6 @@
 {
   "name": "react-native-select-search",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A react-native select component that provides a dropdown for use in react-native.  This component also provides a search functionality within the dropdown that allows a use to filter results.",
   "scripts": {
     "build": "tsc",
