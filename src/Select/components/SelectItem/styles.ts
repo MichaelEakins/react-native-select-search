@@ -1,5 +1,5 @@
-import {StyleSheet, TextStyle, ViewStyle} from 'react-native';
-import {Colors} from '../../../Utils';
+import { StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { Colors } from "../../../Utils/index";
 
 interface IStyles {
   container: ViewStyle;
@@ -13,8 +13,8 @@ export const styles = (containerBackgroundColor?: string) =>
         ? containerBackgroundColor
         : Colors.alabaster,
       flex: 1,
-      flexDirection: 'row',
-      width: '100%',
+      flexDirection: "row",
+      width: "100%",
     },
     text: {
       fontSize: 17,

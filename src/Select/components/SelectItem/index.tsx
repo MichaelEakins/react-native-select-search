@@ -1,7 +1,7 @@
-import React from 'react';
-import {Pressable, Text, TextStyle, View, ViewStyle} from 'react-native';
+import * as React from "react";
+import { Pressable, Text, TextStyle, View, ViewStyle } from "react-native";
 
-import {styles as stylesWrapper} from './styles';
+import { styles as stylesWrapper } from "./styles";
 
 interface ISelectItem {
   id: string | number;
@@ -25,7 +25,8 @@ export const SelectItem: React.FC<ISelectItem> = ({
     <Pressable
       style={[styles.container, containerStyle]}
       key={`${id}`}
-      onPress={() => handlePress(id)}>
+      onPress={() => handlePress(id)}
+    >
       <Text numberOfLines={1} style={[styles.text, fontStyle]}>
         {label}
       </Text>

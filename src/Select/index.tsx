@@ -1,4 +1,5 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import * as React from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   FlatList,
   GestureResponderEvent,
@@ -7,43 +8,38 @@ import {
   TextStyle,
   View,
   ViewStyle,
-} from 'react-native';
-import {styles} from './styles';
-import {SelectItem} from './components/SelectItem';
-import {SelectContainer} from './components/SelectContainer';
-import {Colors} from '../Utils';
+} from "react-native";
+import { styles } from "./styles";
+import { SelectItem } from "./components/SelectItem/index";
+import { SelectContainer } from "./components/SelectContainer/index";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
-export interface SelectItem {
-  itemLabel: string;
-  itemValue: string;
+export interface SelectProps {
+  dropDownContainerStyle?: ViewStyle;
+  errorTextStyle?: TextStyle;
+  itemLabel?: string;
+  itemValue?: string | number;
+  items: any[];
+  placeholderTextColor?: string;
+  searchPlaceHolder?: string;
+  searchable?: boolean;
+  searchCallback?: (searchText: string) => void;
 }
 
-interface ISelect {
-  dropDownContainerStyle?: ViewStyle; //Optional: This allows changing the drop down height
-  errorTextStyle?: TextStyle; //Optional: style for error text.
-  itemLabel?: string; //Optional: If the data set has a displayed value that is not name , set it here.
-  itemValue?: string | number; //Optional: If the data set has a value that is not id, set it here.
-  items: any[]; //Dataset to use
-  placeholderTextColor?: string; //Optional: This allows changing the placeholder text color if searchable is true
-  searchPlaceHolder?: string; //Optional: This is the text displayed as a placeholder if searchable is true
-  searchable?: boolean; //Optional: This determines if the data is searchable/filterable
-  searchCallback?: (searchText: string) => void; //Optional: This allows for passing in a callback when search text is entered so that filtering can be performed via a custom method or your own search API.
-}
-
-export const Select: React.FC<ISelect> = ({
+export const Select: React.FC<SelectProps> = ({
   dropDownContainerStyle,
   errorTextStyle,
-  itemLabel = 'name',
-  itemValue = 'id',
+  itemLabel = "name",
+  itemValue = "id",
   items,
   placeholderTextColor = Colors.silver,
   searchCallback,
-  searchPlaceHolder = 'Search',
+  searchPlaceHolder = "Search",
   searchable = false,
 }) => {
   const [filteredItems, setFilteredItems] = useState(items);
   const [isSearching, setIsSearching] = useState(false);
-  const [searchFilter, setSearchFilter] = useState('');
+  const [searchFilter, setSearchFilter] = useState("");
   const [selectedItem, setSelectedItem] = useState(undefined);
   const [showDropDown, setShowDropDown] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,26 +54,26 @@ export const Select: React.FC<ISelect> = ({
 
   useEffect(() => {
     if (!searchCallback) {
-      const results = items.filter((item) =>
-        searchFilter !== ''
+      const results = items.filter((item: any) =>
+        searchFilter !== ""
           ? item[itemLabel].toLowerCase().includes(searchFilter.toLowerCase())
-          : items,
+          : items
       );
       setFilteredItems(results);
     } else {
       searchCallback(searchFilter);
     }
 
-    console.log('HERE');
+    console.log("HERE");
     setIsSearching(true);
   }, [searchFilter, setSearchFilter]);
 
   const handlePress = (id: string | number) => {
-    const currentItem = items.find((item) => item[itemValue] === id);
+    const currentItem = items.find((item: any) => item[itemValue] === id);
     setSelectedItem(currentItem);
   };
 
-  const renderItem = ({item, index}) => {
+  const renderItem = ({ item }: any) => {
     const id = item[itemValue];
     const label = item[itemLabel];
 
@@ -98,7 +94,7 @@ export const Select: React.FC<ISelect> = ({
       {showDropDown && (
         <Fragment>
           {searchable && (
-            <View style={{backgroundColor: Colors.alabaster}}>
+            <View style={{ backgroundColor: Colors.alabaster }}>
               <TextInput
                 placeholder={searchPlaceHolder}
                 placeholderTextColor={placeholderTextColor}

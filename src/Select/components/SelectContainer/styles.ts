@@ -1,5 +1,5 @@
-import {StyleSheet, TextStyle, ViewStyle} from 'react-native';
-import {Colors} from '../../../Utils';
+import { StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { Colors } from "../../../Utils/index";
 
 interface IStyles {
   container: ViewStyle;
@@ -13,27 +13,27 @@ export const styles = StyleSheet.create<IStyles>({
   container: {
     backgroundColor: Colors.silver,
     height: 30,
-    width: '100%',
+    width: "100%",
   },
   iconContainer: {
-    alignItems: 'flex-end',
+    alignItems: "flex-end",
     width: 20,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   pressable: {
     backgroundColor: Colors.white,
     borderColor: Colors.porcelain,
     borderWidth: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
     height: 30,
-    width: '100%',
+    width: "100%",
   },
   text: {
     fontSize: 17,
   },
   textContainer: {
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 });

@@ -1,8 +1,8 @@
-import React from 'react';
-import {GestureResponderEvent, Pressable, Text, View} from 'react-native';
-import {Colors} from '../../../Utils';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {styles} from './styles';
+import * as React from "react";
+import { GestureResponderEvent, Pressable, Text, View } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
+import { Colors } from "../../../Utils/index";
+import { styles } from "./styles";
 
 Icon.loadFont();
 
@@ -27,7 +27,7 @@ export const SelectContainer: React.FC<ISelectContainer> = ({
           <Text numberOfLines={1}>{selectedItem[itemLabel]}</Text>
         </View>
       )}
-      <View style={[styles.iconContainer, !selectedItem && {flex: 1}]}>
+      <View style={[styles.iconContainer, !selectedItem && { flex: 1 }]}>
         <Icon name="caret-down" size={arrowSize} color={arrowColor} />
       </View>
     </Pressable>

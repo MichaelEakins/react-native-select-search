@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "A react-native select component that provides a dropdown for use in react-native.  This component also provides a search functionality within the dropdown that allows a use to filter results.",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -42,8 +43,8 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "eslint-plugin-react-native": "^3.9.0",
     "metro-react-native-babel-preset": "^0.63.0",
-    "prettier": "^2.0.5",
-    "typescript": "~3.9.5"
+    "prettier": "^2.1.2",
+    "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "react": "~16.11.0",

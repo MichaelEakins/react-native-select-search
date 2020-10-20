@@ -1,5 +1,5 @@
-import {StyleSheet, ViewStyle, TextStyle} from 'react-native';
-import {Colors} from '../Utils';
+import { StyleSheet, ViewStyle, TextStyle } from "react-native";
+import { Colors } from "../Utils/index";
 
 interface IStyles {
   container: ViewStyle;
@@ -10,12 +10,12 @@ interface IStyles {
 export const styles = StyleSheet.create<IStyles>({
   container: {
     flex: 1,
-    width: '100%',
-    alignItems: 'stretch',
+    width: "100%",
+    alignItems: "stretch",
   },
   dropDownContainer: {
     height: 100,
-    width: '100%',
+    width: "100%",
   },
   noResultsText: {
     color: Colors.torchRed,
